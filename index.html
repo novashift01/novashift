@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmikz - Geleceğin Tarımı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="view-transition" content="same-origin" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --accent-color: #4caf50;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --sidebar-width: 250px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #fff;
+        }
+
+        /* --- Yan Menü (Sidebar) --- */
+        aside {
+            width: vaar(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            padding: 40px 20px;
+            border-right: 1px solid #eee;
+            background: white;
+            z-index: 100;
+        }
+
+        .logo-container {
+            margin-bottom: 50px;
+        }
+
+        .logo-container i {
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+
+        .logo-container h1 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-bottom: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--primary-color);
+        }
+
+        /* --- Ana İçerik Alanı --- */
+        main {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+        }
+
+        /* Hero Bölümü */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            font-style: italic;
+            max-width: 600px;
+        }
+
+        /* Misyon & Vizyon */
+        .mission-vision {
+            display: flex;
+            padding: 80px 5%;
+            gap: 50px;
+            background: #fff;
+        }
+
+        .card {
+            flex: 1;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .bg-green { background-color: #e8f5e9; color: #2e7d32; }
+        .bg-blue { background-color: #e3f2fd; color: #1976d2; }
+
+        .card h3 {
+            font-size: 24px;
+            color: #2e7d32;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* Özellikler (Grid) */
+        .features-section {
+            padding: 80px 5%;
+            background-color: #fafafa;
+            text-align: center;
+        }
+
+        .features-section h2 {
+            color: #6a1b9a; /* Görseldeki morumsu başlık rengi */
+            margin-bottom: 50px;
+            font-size: 28px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            text-align: left;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .feature-icon {
+            min-width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-size: 20px;
+        }
+
+        .feature-text h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .feature-text p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            aside { display: none; }
+            main { margin-left: 0; width: 100%; }
+            .mission-vision, .features-grid {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <aside>
+        <div class="logo-container">
+            <i class="fas fa-leaf"></i>
+            <h1>Edmikz</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="index.htm (2).html">Uygulama</a></li>
+                <li><a href="indexex.html">Takım Üyelikleri ve Yetkinlikler</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section class="hero">
+            <h2>Edmikz</h2>
+            <p>Küçük üretici, büyük teknolojiyle kazansın.</p>
+        </section>
+
+        <section class="mission-vision">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-box bg-green"><i class="fas fa-leaf"></i></div>
+                    <h3 style="color: #8bc34a;">Misyonumuz</h3>
+                </div>
+                <p>Misyonumuz, küçük çiftçilerin üretim süreçlerini veri ve yapay zekâ ile güçlendirerek daha bilinçli, verimli ve sürdürülebilir tarım yapmalarını sağlamaktır. İklim, toprak ve ürün verilerini analiz ederek doğru ürün seçimi ve planlama konusunda çiftçilere rehberlik eder.</p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-box bg-blue"><i class="fas fa-bolt"></i></div>
+                    <h3 style="color: #64b5f6;">Vizyonumuz</h3>
+                </div>
+                <p>Edmikz platformunu yalnızca Türkiye'de değil, dünyanın dört bir yanındaki küçük çiftçilerin vazgeçilmez yardımcısı haline getirmek; yapay zeka destekli çözümlerle üretimi daha verimli, sürdürülebilir ve daha kârlı hale getirmeyi hedefliyoruz.</p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>Geleceğin Tarımı için Akıllı Destek Sistemi</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: #4caf50;"><i class="fas fa-chart-line"></i></div>
+                    <div class="feature-text">
+                        <h4>Veri Odaklı Karar Destek</h4>
+                        <p>Uydu görüntüleri, meteorolojik veriler, toprak analizleri ve pazar trendlerini yapay zeka ile analiz ederek özel öneriler sunuyoruz.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: #2196f3;"><i class="fas fa-tint"></i></div>
+                    <div class="feature-text">
+                        <h4>Kişiselleştirilmiş Ekim Planlaması</h4>
+                        <p>Her çiftçinin arazisinin benzersiz özelliklerini dikkate alarak, hangi ürünlerin ne zaman ekilmesi gerektiğini önerir.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: #ff9800;"><i class="fas fa-seedling"></i></div>
+                    <div class="feature-text">
+                        <h4>Sürdürülebilirlik Odaklı</h4>
+                        <p>Enerji verimliliğini, su kullanımını ve karbon ayak izini optimize ederek çiftçilerin hem kârını artırır hem de doğayı korur.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: #4db6ac;"><i class="fas fa-user-friends"></i></div>
+                    <div class="feature-text">
+                        <h4>Kullanıcı Dostu Mobil Arayüz</h4>
+                        <p>Teknolojiye aşina olmayan çiftçilerin bile kolayca kullanabileceği, Türkçe destekli, sezgisel bir mobil uygulama.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: #1e88e5;"><i class="fas fa-bolt"></i></div>
+                    <div class="feature-text">
+                        <h4>Gerçek Zamanlı İzleme</h4>
+                        <p>Hava koşulları, hastalık riskleri ve pazar fiyatlarını sürekli izleyerek anlık bildirimler ve öneriler sunuyoruz.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: #f4511e;"><i class="fas fa-brain"></i></div>
+                    <div class="feature-text">
+                        <h4>Yapay Zeka Modelleri</h4>
+                        <p>Makine öğrenmesi algoritmaları, tahmin modelleme ve algoritma optimizasyonu ile en yüksek doğruluğu sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

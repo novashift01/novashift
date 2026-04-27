@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmikz - Geleceğin Tarımı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="view-transition" content="same-origin" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+       :root {
+            --primary-color: #2e7d32;
+            --accent-color: #4caf50;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --sidebar-width: 250px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #fff;
+        }
+
+        /* --- Yan Menü (Sidebar) --- */
+        aside {
+            width: vaar(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            padding: 40px 20px;
+            border-right: 1px solid #eee;
+            background: white;
+            z-index: 100;
+        }
+
+        .logo-container {
+            margin-bottom: 50px;
+        }
+
+        .logo-container i {
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+
+        .logo-container h1 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-bottom: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--primary-color);
+        }
+
+
+        /* Ana İçerik Alanı */
+        .main-content {
+            margin-left: 280px; /* Boşluk kadar sağa itiyoruz */
+            flex: 1;
+            padding: 60px 40px;
+            max-width: 1000px;
+        }
+
+        .header-area {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .header-area h1 {
+            font-size: 26px;
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+
+        .header-area p {
+            font-size: 18px;
+            color: #444;
+            font-style: italic;
+        }
+
+        /* Liste Düzeni */
+        .competency-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .category-block h2 {
+            font-size: 22px;
+            color: #000;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            font-size: 17px;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li::before {
+            content: '✓';
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Mobil uyum: Ekran küçülünce boşluk kalkar */
+        @media (max-width: 900px) {
+            .sidebar-spacer { display: none; }
+            .main-content { margin-left: 0; padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="logo-container">
+            <i class="fas fa-leaf"></i>
+            <h1>Edmikz</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" ">Ana Sayfa</a></li>
+                <li><a href="index.htm (2).html">Uygulama</a></li>
+                <li><a href="indexex.html"class="active">Takım Üyelikleri ve Yetkinlikler</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="sidebar-spacer"></div>
+
+    <main class="main-content">
+        <div class="header-area">
+            <h1>Takım Üyelikleri ve Yetkinlikler</h1>
+            <p>Farklı disiplinlerden gelen ve ortak bir hedef için birleşen altı dinamik üye.</p>
+        </div>
+
+        <div class="competency-container">
+            <div class="category-block">
+                <h2>Takım Lideri & Proje Yönetimi</h2>
+                <ul class="skill-list">
+                    <li>Stratejik planlama</li>
+                    <li>Ekip koordinasyonu</li>
+                    <li>Hedef belirleme</li>
+                    <li>Paydaş iletişimi</li>
+                </ul>
+            </div>
+
+            <div class="category-block">
+                <h2>Yapay Zeka Geliştirme</h2>
+                <ul class="skill-list">
+                    <li>Makine öğrenmesi modelleri</li>
+                    <li>Derin öğrenme algoritmaları</li>
+                    <li>Veri analizi</li>
+                    <li>Tahmin modelleme</li>
+                </ul>
+            </div>
+
+            <div class="category-block">
+                <h2>Yazılım ve Platform Geliştirme</h2>
+                <ul class="skill-list">
+                    <li>Full-stack web geliştirme</li>
+                    <li>Kullanıcı arayüzü/deneyimi</li>
+                    <li>Veritabanı yönetimi</li>
+                    <li>Mobil uygulama (iOS/Android)</li>
+                </ul>
+            </div>
+
+            <div class="category-block">
+                <h2>Veri Bilimi & Analiz</h2>
+                <ul class="skill-list">
+                    <li>Büyük veri işleme</li>
+                    <li>İstatistiksel modelleme</li>
+                    <li>Veri görselleştirme</li>
+                    <li>Uydu görüntü analizi</li>
+                </ul>
+            </div>
+
+            <div class="category-block">
+                <h2>Tarım Bilimleri Uzmanı</h2>
+                <ul class="skill-list">
+                    <li>Bitki bilimi</li>
+                    <li>Toprak analizi</li>
+                    <li>Sürdürülebilir tarım</li>
+                    <li>İklim-ürün ilişkileri</li>
+                </ul>
+            </div>
+
+            <div class="category-block">
+                <h2>İş Geliştirme & Pazarlama</h2>
+                <ul class="skill-list">
+                    <li>Pazar araştırması</li>
+                    <li>Stratejik ortaklıklar</li>
+                    <li>Kullanıcı erişimi</li>
+                    <li>Finansal modelleme</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

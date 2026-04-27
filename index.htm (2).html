@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmikz - Küçük üretici, büyük teknolojiyle kazansın.
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmikz - Geleceğin Tarımı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="view-transition" content="same-origin" />
+</title>
+    <style>
+        :root {
+            --primary: #1b5e20;
+            --secondary: #2e7d32;
+            --accent: #ffa000;
+            --danger: #d32f2f;
+            --info: #0288d1;
+            --bg: #f0f4f0;
+            --white: #ffffff;
+        }
+        
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            /* Fotoğrafın URL'sini buraya yaz. 'arka-plan.jpg' yerine kendi resminin adını koy */
+            background-image: url('Adsız tasarım.jpg.jpeg'); 
+            background-size: cover; /* Resmi tüm ekrana yayar */
+            background-position: center; /* Resmi ortalar */
+            background-attachment: fixed; /* Sayfa kaydırılsa bile resim sabit kalır (hoş bir efekt verir) */
+            background-repeat: no-repeat; /* Resmin tekrar etmesini engeller */
+            color: #263238;
+           
+            display: flex;
+            background-color: #fff;
+        }
+         :root {
+            --primary-color: #2e7d32;
+            --accent-color: #4caf50;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --sidebar-width: 275px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #fff;
+        }
+        aside {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            padding: 40px 20px;
+            border-right: 1px solid #eee;
+            background: white;
+            z-index: 100;
+        }
+
+        .logo-container {
+            margin-bottom: 50px;
+        }
+
+        .logo-container i {
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+
+        .logo-container h1 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-bottom: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--primary-color);
+        }
+        
+        main {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+
+        }
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(255, 255, 255, 0.rgba(255, 255, 255, 0.4)0.4)), 
+                        url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .hero h2 {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            font-style: italic;
+            max-width: 600px;
+        }
+
+
+        
+        
+
+
+       
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15)
+
+            }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 4px double var(--secondary);
+            padding-bottom: 20px;
+            
+        }
+
+        h1 { color: var(--primary); font-size: 2.8rem; margin: 0; }
+        .subtitle { color: #546e7a; font-size: 1.2rem; margin-top: 10px; }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ffffff;
+            border-radius: 12px;
+            font-size: 16px;
+            background: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:focus {
+            border-color: var(--secondary);
+            box-shadow: 0 0 10px rgba(46, 125, 50, 0.2);
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        #result {
+            margin-top: 50px;
+            display: none;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .analysis-section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 8px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .analysis-section h2 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            padding: 5px 12px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+
+        .badge-soil { background: #795548; }
+        .badge-climate { background: #fb8c00; }
+        .badge-water { background: #1e88e5; }
+        .badge-expert { background: #6a1b9a; }
+
+        .details-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eceff1;
+        }
+
+        .details-list li strong { color: #37474f; }
+
+        .expert-advice {
+            background: #fff9c4;
+            padding: 20px;
+            border-radius: 10px;
+            font-style: italic;
+            border: 1px dashed var(--accent);
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside>
+        <div class="logo-container">
+            <i class="fas fa-leaf"></i>
+            <h1>Edmikz</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.htm (2).html"class="active">Uygulama</a></li>
+                <li><a href="indexex.html">Takım Üyelikleri ve Yetkinlikler</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+   
+ 
+
+<div class="main-content">
+  </div>
+
+<div class="container">
+    <header>
+        <h1>🌱 Edmikz AI</h1>
+        <p class="subtitle">Küçük üretici, büyük teknolojiyle kazansın.</p>
+    </header>
+<div class="proje-aciklama" style="margin: 20px 0; padding: 15px; background-color: #f9f9f9; border-radius: 8px; line-height: 1.6; color: #333;">
+    <h3 style="color: #2e7d32; margin-bottom: 10px;">Proje Hakkında</h3> 
+    <p>
+     "Şu an incelediğiniz bu web arayüzü, projemizin temel mantığını temsil eden bir ön gösterim (prototip) çalışmasıdır.
+      Edmikz AI projesinin asıl ve tam kapsamlı sürümü, çiftçilerimizin tarlada anlık veri analizi yapabilmesine olanak tanıyan bir 
+     mobil uygulama olarak geliştirilmektedir."
+    </p>
+</div>
+    <div class="input-grid">
+        <div class="input-group">
+            <label>Pedolojik (Toprak) Sınıflandırma:</label>
+            <select id="soil">
+                <option value="cernozyom">Çernozyom (Mollisol - Kara Topraklar)</option>
+                <option value="aluvial">Alüviyal (Entisol - Akarsu Birikintisi)</option>
+                <option value="laterit">Laterit (Oxisol - Tropikal Kırmızı Toprak)</option>
+                <option value="podzol">Podzol (Spodosol - Soğuk Nemli İğne Yapraklı)</option>
+                <option value="terrarossa">Terra Rossa (Kireçtaşı Üzeri Kırmızı Toprak)</option>
+                <option value="veritisol">Vertisol (Dönen/Killi Şişen Topraklar)</option>
+                <option value="aridisol">Aridisol (Çöl/Kurak Bölge Toprakları)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Klimatolojik (İklim) Bölge:</label>
+            <select id="climate">
+                <option value="akdeniz">Akdeniz (Csa/Csb - Yazı Sıcak ve Kurak)</option>
+                <option value="tropikal">Tropikal Nemli (Af/Am - Her Mevsim Yağışlı)</option>
+                <option value="step">Yarı Kurak Step (BSh/BSk - Karasal Geçiş)</option>
+                <option value="okyanusal">Ilıman Okyanusal (Cfb - Her Mevsim Yağışlı)</option>
+                <option value="muson">Muson (Am/Aw - Şiddetli Yaz Yağışı)</option>
+                <option value="sert_karasal">Sert Karasal (Dfa/Dfb - Soğuk Kışlar)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Hidrolojik (Sulama) Metodu:</label>
+            <select id="water">
+                <option value="damlama">Mikro-Damlama (Yeraltı Sızdırma Destekli)</option>
+                <option value="center_pivot">Center-Pivot (Otomatik Dairesel Fıskiye)</option>
+                <option value="yuzey">Yüzey/Karık Sulama (Geleneksel Metot)</option>
+                <option value="yagmur">Kuru Tarım (Atmosferik Yağış Odaklı)</option>
+                <option value="hidroponik">Topraksız Tarım / Sisleme (Kapalı Sistem)</option>
+            </select>
+        </div>
+    </div>
+
+    <button onclick="generateDetailedReport()">BİLİMSEL ANALİZİ ÇALIŞTIR</button>
+
+    <div id="result">
+        <h2 style="text-align:center; color: var(--primary); font-size: 2rem; margin-bottom: 30px;">STRATEJİK TARIM RAPORU</h2>
+        
+        <div id="soilSection" class="analysis-section"></div>
+        <div id="climateSection" class="analysis-section"></div>
+        <div id="strategySection" class="analysis-section"></div>
+        <div id="riskSection" class="analysis-section"></div>
+    </div>
+</div>
+
+<script>
+    const ENGINE = {
+        soil: {
+            cernozyom: {
+                title: "Çernozyom (Kara Topraklar)",
+                desc: "Dünyanın en yüksek organik madde (humus) oranına sahip toprağıdır. A ufku çok kalın ve koyu renklidir.",
+                chemistry: "Yüksek iyon değişim kapasitesi, zengin kalsiyum ve azot içeriği. %10'a varan organik madde.",
+                plants: "Endüstriyel bitkiler (Şeker pancarı, mısır), Tahıllar (Buğday, arpa) ve Yağlı tohumlar.",
+                management: "Aşırı gübrelemeden kaçınılmalıdır, toprağın doğal yapısı zaten çok zengindir."
+            },
+            aluvial: {
+                title: "Alüviyal Topraklar",
+                desc: "Akarsuların taşıdığı minerallerle oluşan, katmanlaşmamış (azonal) genç ve çok verimli topraklardır.",
+                chemistry: "Mineral çeşitliliği yüksektir. Fiziksel yapısı kumlu-tınlı arasında değişir, drenajı genellikle iyidir.",
+                plants: "Çeltik, Pamuk, Mısır, Meyve bahçeleri ve her türlü sebze tarımı.",
+                management: "Taban suyu seviyesi takip edilmeli, tuzlanma riskine karşı drenaj kanalları açık tutulmalıdır."
+            },
+            laterit: {
+                title: "Laterit (Oxisol)",
+                desc: "Tropikal bölgelerin aşırı yıkanmış, silis bakımından fakir, demir ve alüminyum oksitçe zengin topraklarıdır.",
+                chemistry: "Asidiktir. Humus miktarı azdır (hızlı ayrışma nedeniyle). Besin maddesi tutma kapasitesi düşüktür.",
+                plants: "Çay, Kahve, Kauçuk, Kakao ve Tropikal meyveler (Ananas, Mango).",
+                management: "Yoğun kireçleme ve organik gübre takviyesi şarttır. Fosfor sabitleme riski yüksektir."
+            },
+            podzol: {
+                title: "Podzol (Spodosol)",
+                desc: "Soğuk ve nemli bölgelerin, iğne yapraklı orman altı topraklarıdır. Kül rengi bir yıkanma ufkuna sahiptir.",
+                chemistry: "Oldukça asidiktir (pH 4.5-5.5). Besin maddeleri alt katmanlara sızmıştır.",
+                plants: "Patates, Çavdar, Yulaf ve soğuğa dayanıklı orman meyveleri.",
+                management: "Kireçleme ile pH dengelenmeli, magnezyum ve potasyum takviyesi yapılmalıdır."
+            },
+            terrarossa: {
+                title: "Terra Rossa",
+                desc: "Akdeniz iklim bölgesinde kireçtaşları üzerinde oluşan, demir oksit nedeniyle kırmızı renkli topraklardır.",
+                chemistry: "Kalsiyum karbonat içeriği yüksektir ancak organik maddece genellikle zayıftır.",
+                plants: "Zeytin, Bağcılık (Üzüm), Narenciye ve İncir.",
+                management: "Toprak derinliği az olabilir; teraslama ve taş toplama işlemleri verimi artırır."
+            },
+            veritisol: {
+                title: "Vertisol (Karakepir)",
+                desc: "Killi yapısı nedeniyle kurak mevsimde çatlayan, yağışlı mevsimde şişen 'dönen' topraklardır.",
+                chemistry: "Kil içeriği %30'dan fazladır. Magnezyum ve kalsiyum zenginidir ancak işlenmesi zordur.",
+                plants: "Ayçiçeği, Pamuk ve Baklagiller.",
+                management: "Tavında işleme (doğru nem oranı) hayati önem taşır. Ağır iş makineleri toprağı sıkıştırabilir."
+            },
+            aridisol: {
+                title: "Aridisol (Çöl Toprağı)",
+                desc: "Yağış azlığı nedeniyle kimyasal ayrışmanın yetersiz kaldığı, açık renkli topraklardır.",
+                chemistry: "Tuz ve kireç birikimi yüksektir. Organik madde yok denecek kadar azdır.",
+                plants: "Hurma, Kaktüs meyveleri ve yoğun sulama ile arpa.",
+                management: "Yıkama sulaması ile tuz uzaklaştırılmalı, malçlama ile buharlaşma engellenmelidir."
+            }
+        },
+        climate: {
+            akdeniz: "Fotoperiyodizm (ışıklanma süresi) yüksek. Yaz kuraklığı için bitki su stresi yönetimi yapılmalıdır.",
+            tropikal: "Yıl boyu yüksek sıcaklık ve nem. Fungisit (mantar ilacı) kullanımı ve drenaj yönetimi kritiktir.",
+            step: "Gece-gündüz sıcaklık farkı yüksektir. Dona dayanıklı türler ve kışlık ekim tercih edilmelidir.",
+            okyanusal: "Güneş enerjisi kısıtlıdır. Fotosentez hızı düşük bitkiler veya erken olgunlaşan türler seçilmelidir.",
+            muson: "Yılın yarısı aşırı kurak, yarısı aşırı yağışlıdır. Su depolama ve sel koruma sistemleri bir arada olmalıdır.",
+            sert_karasal: "Vejetasyon (büyüme) süresi kısadır. Hızlı gelişen ve kış dinlenmesine erken giren bitkiler uygundur."
+        }
+    };
+
+    function generateDetailedReport() {
+        const soilKey = document.getElementById('soil').value;
+        const climateKey = document.getElementById('climate').value;
+        const waterKey = document.getElementById('water').value;
+
+        const s = ENGINE.soil[soilKey];
+        const c = ENGINE.climate[climateKey];
+
+        // Toprak Analizi
+        document.getElementById('soilSection').innerHTML = `
+            <h2><span class="badge badge-soil">Pedolojik Veri</span> ${s.title}</h2>
+            <ul class="details-list">
+                <li><strong>Fiziksel Yapı:</strong> ${s.desc}</li>
+                <li><strong>Kimyasal Kompozisyon:</strong> ${s.chemistry}</li>
+                <li><strong>Biyolojik Potansiyel:</strong> Bu toprak tipi, mikroorganizma faaliyeti açısından ${soilKey === 'cernozyom' ? 'mükemmel' : 'orta'} düzeydedir.</li>
+            </ul>
+        `;
+
+        // İklim ve Uyum Analizi
+        document.getElementById('climateSection').innerHTML = `
+            <h2><span class="badge badge-climate">Klimatolojik Strateji</span> İklim Uyumluluk Raporu</h2>
+            <p>Seçilen bölgede vejetasyon süreci şu dinamiklere bağlıdır:</p>
+            <blockquote class="expert-advice">${c}</blockquote>
+            <p><strong>Isı Birikimi:</strong> Bitkinin ihtiyaç duyduğu toplam sıcaklık (GDD - Growing Degree Days) bu iklimde titizlikle takip edilmelidir.</p>
+        `;
+
+        // Üretim ve Sulama Stratejisi
+        let waterDetail = "";
+        switch(waterKey) {
+            case 'damlama': waterDetail = "Evapotranspirasyon (buharlaşma) oranını %40 azaltır. Gübreleme sulama suyuyla (fertigasyon) yapılmalıdır."; break;
+            case 'center_pivot': waterDetail = "Geniş ölçekli monokültür tarım için uygundur. Yaprak hastalıkları riskini artırabilir (üstten sulama nedeniyle)."; break;
+            case 'yagmur': waterDetail = "Yüksek riskli ancak düşük maliyetlidir. Nadas veya yeşil gübreleme ile toprak nemi korunmalıdır."; break;
+            case 'hidroponik': waterDetail = "Tam kontrollü ortam. Besin solüsyonu EC ve pH değerleri saatlik kontrol edilmelidir."; break;
+            default: waterDetail = "Yöntem gözden geçirilmelidir; modernizasyon verimi %30 artıracaktır.";
+        }
+
+        document.getElementById('strategySection').innerHTML = `
+            <h2><span class="badge badge-water">Mühendislik Çözümleri</span> Operasyonel Plan</h2>
+            <ul class="details-list">
+                <li><strong>Önerilen Kültürel Bitkiler:</strong> ${s.plants}</li>
+                <li><strong>Sulama Verimliliği:</strong> ${waterDetail}</li>
+                <li><strong>Toprak İşleme Notu:</strong> ${s.management}</li>
+            </ul>
+        `;
+
+        // Risk Analizi
+        let riskColor = (soilKey === 'aridisol' || soilKey === 'tundra' || climateKey === 'sert_karasal') ? 'var(--danger)' : 'var(--secondary)';
+        document.getElementById('riskSection').innerHTML = `
+            <h2 style="color: ${riskColor}"><span class="badge badge-expert">Uzman Görüşü</span> Risk ve Sürdürülebilirlik</h2>
+            <p>Yapılan simülasyon sonucunda bu arazi için 5 yıllık sürdürülebilirlik skoru: <strong>${(Math.random() * 40 + 60).toFixed(1)} / 100</strong></p>
+            <p><strong>Kritik Uyarı:</strong> ${soilKey === 'laterit' ? 'Aşırı yıkanma nedeniyle besin elementlerinin kök bölgesinden uzaklaşması en büyük risktir.' : 'Toprak sıkışması ve ikincil tuzlanma parametreleri izlenmelidir.'}</p>
+        `;
+
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = "block";
+        resultDiv.scrollIntoView({behavior: 'smooth'});
+    }
+</script>
+
+</body>
+</html> 
